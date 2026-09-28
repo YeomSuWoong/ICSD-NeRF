@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.claude/
+.vscode/
+
+# data, weights, outputs
+data/
+log/
+*.th
+*.pt
+*.pth
+*.npz
+events.out.tfevents*

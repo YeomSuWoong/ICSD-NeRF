@@ -1,0 +1,84 @@
+# NVIDIA Dynamic Scenes (forward-facing, NDC rays)
+
+dataset_name = nvidia
+datadir = data/nvidia/Balloon1
+expname = Balloon1
+basedir = log/nvidia
+
+downsample_train = 2.0
+ray_type = ndc
+
+# cameras are estimated jointly (no COLMAP poses)
+with_GT_poses = 0
+optimize_poses = 1
+optimize_focal_length = 1
+
+use_foreground_mask = motion_masks
+
+shadingMode = MLP_Fea_late_view
+shadingModeStatic = MLP_Fea
+fea2denseAct = relu
+
+N_vis = -1
+vis_train_every = 10000
+progress_refresh_rate = 1000
+
+render_test = 1
+render_path = 1
+
+# ---------------------------------------------------------------------------
+# Hyperparameters
+# The values are not included in this release. Uncomment and fill in every
+# entry below before training (see opt.py for the description of each option).
+# ---------------------------------------------------------------------------
+# n_iters =
+# batch_size =
+# lr_init =
+# lr_basis =
+# lr_decay_target_ratio =
+# lr_pose =
+# lr_pose_final =
+# init_fov_deg =
+# pose_freeze_iter =
+# focal_opt_start_iter =
+
+# N_voxel_init =
+# N_voxel_final =
+# upsamp_list = []
+# step_ratio =
+
+# n_lamb_sigma = []
+# n_lamb_sh = []
+# data_dim_color =
+# featureC =
+# view_pe =
+# fea_pe_static =
+# fea_pe_dynamic =
+
+# w_rgb =
+# w_rgb_static =
+# w_rgb_dynamic =
+# w_mask =
+# w_skewed_mask =
+# w_mask_l1 =
+# w_order =
+# w_flow =
+# w_disp =
+# w_flow_static =
+# w_disp_static =
+# w_disp_smooth =
+# monodepth_weight_static =
+# monodepth_weight_dynamic =
+# smooth_scene_flow_weight =
+# small_scene_flow_weight =
+# distortion_weight_static =
+# distortion_weight_dynamic =
+# TV_weight_density =
+# TV_weight_app =
+# L1_weight_inital =
+
+# mask_loss_start_iter =
+# mask_reg_start_iter =
+# static_decay_iters =
+# dynamic_decay_iters =
+# mask_smooth_decay_iters =

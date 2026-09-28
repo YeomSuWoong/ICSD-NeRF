@@ -1,0 +1,17 @@
+# torch>=1.10 and torchvision: install the build that matches your CUDA version
+numpy
+scipy
+opencv-python
+Pillow
+imageio
+imageio-ffmpeg
+matplotlib
+tqdm
+tensorboard
+configargparse
+easydict
+scikit-image>=0.19
+lpips
+torch_efficient_distloss
+# preprocessing (scripts/generate_DPT.py)
+timm
